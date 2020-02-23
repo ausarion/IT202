@@ -91,28 +91,30 @@ if(	   isset($_POST['email'])
 		</script>
 	</head>
 	<body onload="findFormsOnLoad();">
-		<!-- This is how you comment -->
-		<form name="regform" id="myForm" method="POST"
-					onsubmit="return doValidations(this)">
-			<div>
-				<label for="email">Email: </label><br>
-				<input type="email" id="email" name="email" placeholder="Enter Email"/>
-				<span id="email_error"></span>
-			</div>
-			<div>
-				<label for="pass">Password: </label><br>
-				<input type="password" id="pass" name="password" placeholder="Enter password"/>
-			</div>
-			<div>
-			<label for="conf">Confirm Password: </label><br>
-				<input type="password" id="conf" name="confirm"/>
-				<span id="password_error"></span>
-			</div>
-			<div>
-				<div>&nbsp;</div>
-				<input type="submit" value="Register"/>
-			</div>
-		</form>
+	<marquee height=""><h6  fontcolor="blue" fontsize= "60">Welcome...!!!!! TO....Multi Product Search.....!!!!!</h6></marquee>
+        <marquee><h6  fontcolor="blue" fontsize= "60">Where...!!!!! No....Product Is Hard To Find.....!!!!!</h6></marquee>
+        <form name="regform" action="login.php" id="myForm" method="POST"
+                                                                     onsubmit="return verifyPasswords(this)">
+                <center><table border="2" width="325" height="100">
+                <tr>
+                <td align= "center" colspan="3" bgcolor="gray">New User's Register</td>
+                </tr>
+                <tr>
+                <td><label for= "email">Email:</td><td><input type="email"id="email" name="email"placeholder="Enter Email"/></td>
+                </tr>
+                <span id="email_error"></span>
+                <tr>
+                      <td><label for="pass">Password:</td><td><input type="password" id="pass" name="password" placeholder="Enter password"/></td>
+                </tr>
+                <tr>
+                <td><label for="conf">Confirm Password:</td><td></label><input type="password" id="conf" name="confirm"/></td>
+                </tr>
+                <tr>
+                <td align="center"><input align="right" type="submit" value="Register"/></td>
+                </tr>
+                </table></center>
+        </form>
+
 		<?php if(isset($msg)):?>
 			<span><?php echo $msg;?></span>
 		<?php endif;?>
